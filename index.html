@@ -8,24 +8,43 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <header>
+    <section class="interface">
+        <header>
+            <section class="container navbar">
+                <img src="assets/img/pizza.png" alt="Pedaço de pizza" width="40px"/>
+                <h1 class="heading-navbar">Pizza Slice</h1>
+            </section>
+        </header>
 
-    </header>
+        <main class="container">
+            <section class="container">
+                <div class="container-item">
+                    <form id="user-form">
+                        <label class="heading-name" for="user-name">Como você se chama?</label>
+                        <input type="text" name="" id="user-name" class="input-name" placeholder="Digite seu nome..."/>
+                        <button type="submit" class="btn-eat">Vamos lá! &#10149;</button>
+                    </form>
+                </div>
+            </section>
 
-    <main>
-        <section id="form">
-            <form id="user-form">
-                <h1>Como você se chama?</h1>
-                <input type="text" name="" id="user-name" placeholder="Digite seu nome">
-                <button type="submit">Iniciar</button>
-            </form>
-        </section>
-    </main>
+            <section id="disabled" class="container">
+                <div class="container-item">
+                    <h1>Seu nome</h1>
+                    <p>Você já comeu</p>
+                </div>
+                <div class="container-item">
+                    <button>-</button>
+                    <span>0</span>
+                    <button>+</button>
+                    <p>pedaços de pizza</p>
+                </div>
+            </section>
+        </main>
 
-    <footer>
-
-    </footer>
-
+        <footer>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis adipisci alias ut? Animi tempore esse labore voluptatibus amet repellendus maiores rem in, odio ex autem voluptatum, perspiciatis quam nam reiciendis.</p>
+        </footer>
+    </section>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

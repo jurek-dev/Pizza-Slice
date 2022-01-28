@@ -1,5 +1,90 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+section.interface {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    background-color: #101820;
+}
+
+h1.heading-navbar {
+    color: #FFFFFF;
+}
+
+main {
+    flex-grow: 1;
+}
+
+label.heading-name {
+    font-family: 'Oswald';
+    font-size: 2rem;
+    color: #FFFFFF;
+}
+
+input.input-name {
+    margin-top: 0.5em;
+    width: 80%;
+    height: 50px;
+    font-size: 1.5rem;
+    font-family: 'Oswald';
+    background-color: #F5F5F5;
+}
+
+input.input-name:hover {
+    background-color: #cccccc;
+}
+
+button.btn-eat {
+    margin-top: 0.5em;
+    width: 60%;
+    height: 2em;
+    background-color: #af231c;
+    border: none;
+    box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
+    cursor: pointer;
+    color: white;
+    font-size: 21pt;
+    font-family: 'Bebas Neue', cursive;
+}
+
+button.btn-eat:hover {
+    background-color: #57110d;
+}
+
+button {
+    width: 40px;
+    height: 40px;;
+}
 
 h1, h2, input, button, p, span {
     font-family: 'Oswald';
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+section.navbar {
+    background-color: #af231c;
+}
+
+#disabled {
+    display: none;
 }
