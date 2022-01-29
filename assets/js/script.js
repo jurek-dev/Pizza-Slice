@@ -6,14 +6,6 @@ const btnUp = document.getElementById('button-up');
 
 var userScore;
 
-if(localStorage.score == null) {
-    localStorage.score = 0;
-    userScore = parseInt(localStorage.score);
-}
-else {
-    userScore = parseInt(localStorage.score);
-}
-
 userForm.onsubmit = function(f) {
     f.preventDefault();
     const inputName = document.getElementById('user-name');
@@ -29,6 +21,15 @@ userForm.onsubmit = function(f) {
 function changeDashboard(userName) {
     dashboard.style.display = "block";
     document.getElementById('heading-username').innerHTML = userName;
+
+    if(localStorage.getItem('score') == null) {
+        localStorage.score = 0;
+        userScore = parseInt(localStorage.score);
+    }
+    else {
+        userScore = parseInt(localStorage.score);
+    }
+    
     document.getElementById('userPoints').innerHTML = userScore;
 }
 
