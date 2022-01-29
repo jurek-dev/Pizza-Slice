@@ -29,9 +29,13 @@ btnDown.addEventListener('click', pointsDown);
 btnUp.addEventListener('click', pointsUp);
 
 function pointsUp() {
-    userScore += +1;
-    localStorage.score = userScore;
-    document.getElementById('userPoints').innerHTML = userScore;
+    if(userScore < 1000) {
+        userScore += +1;
+        localStorage.score = userScore;
+        document.getElementById('userPoints').innerHTML = userScore;
+    } else {
+        console.log("O número não pode ser maior que 1000.")
+    }
 }
 
 function pointsDown() {
@@ -39,5 +43,7 @@ function pointsDown() {
         userScore += -1;
         localStorage.score = userScore;
         document.getElementById('userPoints').innerHTML = userScore;
+    } else {
+        console.log("O número não pode ser menor que 0.")
     }
 }
