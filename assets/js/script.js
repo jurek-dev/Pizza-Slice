@@ -2,9 +2,9 @@ const userForm = document.getElementById('user-form');
 const formBoard = document.getElementById('form-board');
 const dashboard = document.getElementById('dashboard');
 const btnDown = document.getElementById('button-down');
-const btnUp = document.getElementById('button-up')
+const btnUp = document.getElementById('button-up');
 
-var userScore = 0;
+var userScore = parseInt(localStorage.score);
 
 userForm.onsubmit = function(f) {
     f.preventDefault();
@@ -21,6 +21,7 @@ userForm.onsubmit = function(f) {
 function changeDashboard(userName) {
     dashboard.style.display = "block";
     document.getElementById('heading-username').innerHTML = userName;
+    document.getElementById('userPoints').innerHTML = userScore;
 }
 
 btnDown.addEventListener('click', pointsDown);
@@ -28,11 +29,15 @@ btnDown.addEventListener('click', pointsDown);
 btnUp.addEventListener('click', pointsUp);
 
 function pointsUp() {
-    document.getElementById('userPoints').innerHTML = userScore += +1;
+    userScore += +1;
+    localStorage.score = userScore;
+    document.getElementById('userPoints').innerHTML = userScore;
 }
 
 function pointsDown() {
     if(userScore > 0) {
-        document.getElementById('userPoints').innerHTML = userScore += -1;
+        userScore += -1;
+        localStorage.score = userScore;
+        document.getElementById('userPoints').innerHTML = userScore;
     }
 }
