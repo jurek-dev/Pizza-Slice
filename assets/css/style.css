@@ -108,6 +108,32 @@ span.user-points {
     font-size: 5rem;
     color: white;
     font-family: 'Bebas Neue';
-    margin-left: 1em;
-    margin-right: 1em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+button#button-down {
+    background-color: #af231c;
+    border: none;
+    border-radius: 50%;
+    width: 5em;
+    height: 5em;
+}
+
+button#button-up {
+    background-color: #7CFC00;
+    border: none;
+    border-radius: 50%;
+    width: 5em;
+    height: 5em;
+}
+
+div.container-dash {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+span.arrow-custom {
+    font-size: 21pt;
 }
