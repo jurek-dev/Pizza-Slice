@@ -88,3 +88,26 @@ section.navbar {
 #disabled {
     display: none;
 }
+
+section#dashboard {
+    display: none;
+}
+
+h1#heading-username {
+    font-family: 'Oswald';
+    font-size: 3rem;
+    color: #FFFFFF;
+}
+
+p.dashboard-phrase {
+    font-size: 1.5rem;
+    color: white;
+}
+
+span.user-points {
+    font-size: 5rem;
+    color: white;
+    font-family: 'Bebas Neue';
+    margin-left: 1em;
+    margin-right: 1em;
+}

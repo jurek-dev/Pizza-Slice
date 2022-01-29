@@ -17,7 +17,7 @@
         </header>
 
         <main class="container">
-            <section class="container">
+            <section id="form-board" class="container">
                 <div class="container-item">
                     <form id="user-form">
                         <label class="heading-name" for="user-name">Como você se chama?</label>
@@ -27,16 +27,16 @@
                 </div>
             </section>
 
-            <section id="disabled" class="container">
+            <section id="dashboard" class="container">
                 <div class="container-item">
-                    <h1>Seu nome</h1>
-                    <p>Você já comeu</p>
+                    <h1 id="heading-username">Seu nome</h1>
+                    <p class="dashboard-phrase">Você já comeu</p>
                 </div>
                 <div class="container-item">
-                    <button>-</button>
-                    <span>0</span>
-                    <button>+</button>
-                    <p>pedaços de pizza</p>
+                    <button id="button-down">-</button>
+                    <span id="userPoints" class="user-points">0</span>
+                    <button id="button-up">+</button>
+                    <p class="dashboard-phrase">pedaços de pizza</p>
                 </div>
             </section>
         </main>

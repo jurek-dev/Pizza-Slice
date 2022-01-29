@@ -1,4 +1,9 @@
 const userForm = document.getElementById('user-form');
+const formBoard = document.getElementById('form-board');
+const dashboard = document.getElementById('dashboard');
+const btnDown = document.getElementById('button-down');
+const btnUp = document.getElementById('button-up')
+
 var userScore = 0;
 
 userForm.onsubmit = function(f) {
@@ -6,50 +11,28 @@ userForm.onsubmit = function(f) {
     const inputName = document.getElementById('user-name');
     const userName = inputName.value;
 
-    console.log('tudo certo, ' + userName);
     userForm.reset();
 
-    const section = document.getElementById('form');
-    section.style.display = "none";
+    formBoard.style.display = "none";
 
-    createDashboard(userName);
+    changeDashboard(userName);
 }
 
-function createDashboard(userName) {
-    const dashboard = document.createElement('section');
-    const userHeading = document.createElement('h1');
-    const userParagh = document.createElement('p');
-    const userNameNode = document.createTextNode(userName);
-    const headingPoints = document.createElement('span');
-    const btnMore = document.createElement('button');
-    const btnLess = document.createElement('button');
-
-    userHeading.appendChild(userNameNode);
-    userParagh.appendChild(document.createTextNode("Seu placar é de:"));
-    headingPoints.appendChild(document.createTextNode("0"));
-    headingPoints.setAttribute('id', 'idPoints');
-
-    btnMore.appendChild(document.createTextNode("+"));
-    btnMore.setAttribute('id', 'btnMore');
-    btnMore.setAttribute('onclick', 'pointsUp()');
-
-    btnLess.appendChild(document.createTextNode("-"));
-    btnLess.setAttribute('id', 'btnLess');
-    btnLess.setAttribute('onclick', 'pointsDown()');
-
-    dashboard.appendChild(userHeading);
-    dashboard.appendChild(userParagh);
-    dashboard.appendChild(btnLess);
-    dashboard.appendChild(headingPoints);
-    dashboard.appendChild(btnMore);
-
-    document.body.append(dashboard);
+function changeDashboard(userName) {
+    dashboard.style.display = "block";
+    document.getElementById('heading-username').innerHTML = userName;
 }
+
+btnDown.addEventListener('click', pointsDown);
+
+btnUp.addEventListener('click', pointsUp);
 
 function pointsUp() {
-    document.getElementById('idPoints').innerHTML = userScore += +1;
+    document.getElementById('userPoints').innerHTML = userScore += +1;
 }
 
 function pointsDown() {
-    document.getElementById('idPoints').innerHTML = userScore += -1;
+    if(userScore > 0) {
+        document.getElementById('userPoints').innerHTML = userScore += -1;
+    }
 }
