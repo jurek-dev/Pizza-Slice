@@ -6,7 +6,7 @@ const btnUp = document.getElementById('button-up');
 
 var userScore;
 
-if(localStorage.score == undefined) {
+if(localStorage.score == null) {
     localStorage.score = 0;
     userScore = parseInt(localStorage.score);
 }
