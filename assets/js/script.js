@@ -4,7 +4,15 @@ const dashboard = document.getElementById('dashboard');
 const btnDown = document.getElementById('button-down');
 const btnUp = document.getElementById('button-up');
 
-var userScore = parseInt(localStorage.score);
+var userScore;
+
+if(localStorage.score == undefined) {
+    localStorage.score = 0;
+    userScore = parseInt(localStorage.score);
+}
+else {
+    userScore = parseInt(localStorage.score);
+}
 
 userForm.onsubmit = function(f) {
     f.preventDefault();
